@@ -128,3 +128,30 @@ export default function List(){
     );
 }
 ```
+
+## Setting Up a Sort with JS
+
+```js
+import {useState} from 'react';
+
+export default function List(){
+    const [sortBy, setSortBy] = useState("columnName");
+    const [orderBy, setOrderBy] = useState("DESC or ASC");
+
+    list.filter(fn).sort((x,y) => {
+        // Algorithm to sort
+        let order = orderBy == "ASC" ? 1 : -1;
+
+        return (
+            a[sortBy].toLowerCase() < b[sortBy].toLowerCase() ? (-1 * order) : (1 * order)
+        );
+    });
+
+    // It's needed to pass this states to child component
+    return (
+        // ...
+        <SortComponent sortBy={sortBy} onSortByChange={(e) => setSortBy(e)} orderBy={orderBy} orderByOnChange={(e) => setOrderBy(e)} />
+    )
+}
+
+```
