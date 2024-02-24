@@ -26,6 +26,8 @@ You can see all resources here: https://raybo.org/slides_reactinterface
 
 Note: React Icon has a lot of icon libraries.
 
+https://react-icons.github.io/react-icons/
+
 ```npm install react-icons --save```
 
 ```js
@@ -42,6 +44,3 @@ export default function button(){
     );
 }
 ```
-
-## Taildwind CSS
-is a low-level framework for building modern web responsive designs. 
