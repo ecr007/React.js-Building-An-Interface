@@ -76,7 +76,7 @@ const Modalities = () => {
             <div className="content">
                 {
                     modalities.map(function(item){
-                        return <Modality key={item.id} modality={item} fnDelete={fnDelete} />
+                        return <Modality key={item.id} modality={item} fnDelete={item => fnDelete(item)} />
                     });
                 }
             </div>
